@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ramrod.DeceifultDice.models.PlayerItems;
-import com.ramrod.DeceifultDice.service.GameResults;
+import com.ramrod.DeceifultDice.service.GameResultsService;
 
 public class Main {
 	
@@ -22,8 +22,8 @@ public class Main {
 		System.out.println("num pieces: " + numOfPieces);
 		p1.setNumOfPieces(numOfPieces);
 		
-		GameResults result = new GameResults();
-		System.out.println(result.calculateRatio(10, 20));
+		GameResultsService result = new GameResultsService();
+		//System.out.println(result.calculateRatio(10, 20));
 		
 	}
 	
