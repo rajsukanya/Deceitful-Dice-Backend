@@ -23,7 +23,7 @@ public class Main {
 		p1.setNumOfPieces(numOfPieces);
 		
 		GameResultsService result = new GameResultsService();
-		//System.out.println(result.calculateRatio(10, 20));
+	
 		
 	}
 	
