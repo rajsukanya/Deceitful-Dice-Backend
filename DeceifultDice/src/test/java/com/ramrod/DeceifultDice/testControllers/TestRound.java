@@ -1,13 +1,12 @@
 package com.ramrod.DeceifultDice.testControllers;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import com.ramrod.DeceifultDice.Controller.NewRoundController;
 import com.ramrod.DeceifultDice.models.PlayerItems;
@@ -24,6 +23,7 @@ public class TestRound {
 		gs = new GameRollsService();
 		pi = new PlayerItems(1, "human", new ArrayList<>());
 		nc = new NewRoundController();
+		
 	}
 	
 	@Test
@@ -38,7 +38,16 @@ public class TestRound {
 	}
 	
 	@Test
+	//Checks to see if a person won the last round
 	public void nextRoundTest() {
+		int idWinner = 1; 
+		nc.nextRound(pi);
+		assertEquals(idWinner,pi.getPlayerId());
+		
+	}
+	
+	@Test
+	public void checkGameOverTest() {
 		
 	}
 
