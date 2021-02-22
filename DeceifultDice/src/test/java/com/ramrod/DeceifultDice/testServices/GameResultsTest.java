@@ -35,7 +35,7 @@ public class GameResultsTest {
 
 	@Test
 	public void isGameOverTest() {
-		PlayerItems loser = grs.isGameOver();
+		PlayerItems loser = grs.isGameOver(pi, 0);
 		assertEquals(pi, loser);
 	}
 }

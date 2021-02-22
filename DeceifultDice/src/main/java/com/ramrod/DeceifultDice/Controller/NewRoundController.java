@@ -63,9 +63,17 @@ public class NewRoundController {
 		return pi;
 	}
 	
+	//returns the winner of the game (PlayerItems object)
 	@GetMapping("/finalWinner")
 	public PlayerItems checkGameOver() {
+		if(nextRound(human) == null) {
+			return computer;
+		} else if(nextRound(computer) == null) {
+			return human;
+		}
 		return null;
+		
+		
 	}
 	
 	

@@ -14,7 +14,7 @@ public class GameResultsService {
 	//checks who is the winner and returns loser
 	public PlayerItems isGameOver(PlayerItems pi, int newSize) {
 		if(newSize == 0) {
-			return pi;
+			return pi; //returns the loser
 		}
 		return null; //game is not over
 	}

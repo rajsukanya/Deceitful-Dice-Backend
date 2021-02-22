@@ -16,6 +16,7 @@ public class TestRound {
 	
 	private static GameRollsService gs;
 	private static PlayerItems pi;
+	private static PlayerItems winner;
 	private static NewRoundController nc;
 	
 	@BeforeAll
@@ -23,6 +24,7 @@ public class TestRound {
 		gs = new GameRollsService();
 		pi = new PlayerItems(1, "human", new ArrayList<>());
 		nc = new NewRoundController();
+		winner = new PlayerItems(2, "computer", new ArrayList<>());
 		
 	}
 	
@@ -47,8 +49,11 @@ public class TestRound {
 	}
 	
 	@Test
+	//needs mockito to call nextRound
 	public void checkGameOverTest() {
-		
+		PlayerItems newWinner = new PlayerItems(2, "computer", new ArrayList<>());
+		winner = nc.checkGameOver();
+		assertEquals(winner, newWinner);
 	}
 
 }
